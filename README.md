@@ -34,7 +34,6 @@ source can be found at below link, in portuguese. Also original source
 can be found on second link, also in portuguese.
 
 <https://oglobo.globo.com/rio/armas-apreendidas-no-rio-em-2019-somam-mais-de-23-milhoes-veja-numeros-24806138>
-
 <http://www.ispvisualizacao.rj.gov.br/Armas.html>
 
 ## Discussion
@@ -89,33 +88,8 @@ ammunition with weapon.
 
 ``` r
 library(tidyverse)
-```
-
-    ## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
-
-    ## v ggplot2 3.3.5     v purrr   0.3.4
-    ## v tibble  3.1.4     v dplyr   1.0.7
-    ## v tidyr   1.1.3     v stringr 1.4.0
-    ## v readr   2.0.1     v forcats 0.5.1
-
-    ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
-    ## x dplyr::filter() masks stats::filter()
-    ## x dplyr::lag()    masks stats::lag()
-
-``` r
 library(data.table)
 ```
-
-    ## 
-    ## Attaching package: 'data.table'
-
-    ## The following objects are masked from 'package:dplyr':
-    ## 
-    ##     between, first, last
-
-    ## The following object is masked from 'package:purrr':
-    ## 
-    ##     transpose
 
 ``` r
 fire <- read.csv("data_fire.csv")
@@ -173,7 +147,7 @@ ggplot() +
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-![](R_stats_homework_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 Now the graph is replicate within R. Next code is to improve it by
 adding other threatening objects, such as explosves, bladed weapons and
@@ -293,7 +267,7 @@ ggplot() + #generatin graph, using factor order applied on last chunk
        y = "Type")
 ```
 
-![](R_stats_homework_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 With this graph is easy to see that bladed, explosive and simulated
 weapons correspond to a important number of objects seized. This shifts
@@ -326,7 +300,7 @@ ggplot(data = weapons, mapping = aes(x = year, y = amount, fill = type_1)) +
   scale_x_reverse()#flip it to side and then invert old x axis to make from smaller to bigger
 ```
 
-![](R_stats_homework_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 It was possible to make interesting observations with this new graph.
 *2016 had the biggest number of seized weapons. This is maybe related to
@@ -370,7 +344,7 @@ ggplot(data = ammo, mapping = aes(x = year, y = amount)) +
   coord_flip() + scale_x_reverse()
 ```
 
-![](R_stats_homework_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 The scale of ammo captures is much higher than of other objects, over
 hundreds of thousands. It does not follow the same patterns as objects.
