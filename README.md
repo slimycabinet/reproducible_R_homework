@@ -34,6 +34,7 @@ source can be found at below link, in portuguese. Also original source
 can be found on second link, also in portuguese.
 
 <https://oglobo.globo.com/rio/armas-apreendidas-no-rio-em-2019-somam-mais-de-23-milhoes-veja-numeros-24806138>
+
 <http://www.ispvisualizacao.rj.gov.br/Armas.html>
 
 ## Discussion
